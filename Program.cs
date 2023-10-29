@@ -31,7 +31,7 @@ class Program
                 case 1:
                     Console.Write("Введiть кiлькiсть елементiв для додавання у пiдсписок ---> ");
                     int push_elem = int.Parse(Console.ReadLine());
-                    El_Queue myElQueue = new El_Queue(++count_el_sp);
+                    El_Queue_Git myElQueue = new El_Queue_Git(++count_el_sp);
 
                     for (int i = 0; i < push_elem; i++)
                     {

@@ -23,13 +23,13 @@ namespace Lab_3
         }
     }
 
-    public class El_Queue // Клас, який описує елемент списку
+    public class El_Queue_Git // Клас, який описує елемент списку
     {
         public int L_inf; // Інформаційне поле
         public List<El_List> lst; // Підсписок
 
         // Конструктор елементу списка
-        public El_Queue(int inf)
+        public El_Queue_Git(int inf)
         {
             L_inf = inf;
             lst = new List<El_List>();
@@ -84,7 +84,7 @@ namespace Lab_3
         }
 
         // Метод додавання підсписку у список
-        public void EnQueue(El_Queue el_Sp)
+        public void EnQueue(El_Queue_Git el_Sp)
         {
             MyQueue.Enqueue(el_Sp);
         }
@@ -96,9 +96,9 @@ namespace Lab_3
         }
 
         // Метод перегляду першого елементу списка
-        public El_Queue? Peek()
+        public El_Queue_Git? Peek()
         {
-            return (El_Queue?)MyQueue.Peek();
+            return (El_Queue_Git?)MyQueue.Peek();
         }
 
         // Метод перевірки, порожній список чи ні
