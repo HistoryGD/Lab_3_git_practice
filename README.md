@@ -55,7 +55,7 @@ Serialization/ Deserialization
 
 #### Програмна реалізація класу
 
-'using System.Text.Json.Serialization;
+``using System.Text.Json.Serialization;
 
 namespace Lab_7
 {
@@ -285,7 +285,7 @@ namespace Lab_7
                    $"{_overdraft}";
         }
     }
-}'
+}``
 
 #### Програмна реалізація тест-класів
 
