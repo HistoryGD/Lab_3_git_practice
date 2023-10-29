@@ -22,5 +22,54 @@ namespace Lab_3
             return res;
         }
     }
+
+    public class El_Queue // Клас, який описує елемент списку
+    {
+        public int L_inf; // Інформаційне поле
+        public List<El_List> lst; // Підсписок
+
+        // Конструктор елементу списка
+        public El_Queue(int inf)
+        {
+            L_inf = inf;
+            lst = new List<El_List>();
+        }
+
+        // Метод додавання елементу у підсписок
+        public void Add_El_Sp(El_List el)
+        {
+            lst.Add(el);
+        }
+
+        // Метод видалення елементу з підсписку за індексом
+        public void RemoveAt_El_Sp(int i)
+        {
+            lst.RemoveAt(i);
+        }
+
+        // Метод для отримання першого елементу підсписка
+        public El_List First()
+        {
+            return lst.FirstOrDefault();
+        }
+
+        // Метод перевірки, порожній підсписок чи ні
+        public bool IsEmpty()
+        {
+            return lst.Count == 0;
+        }
+
+        // Метод виведення інформації з підсписка
+        public override string ToString()
+        {
+            string res = "";
+
+            res = L_inf.ToString() + " пiдсписок\t---> ";
+            if (lst.Count != 0)
+                foreach (El_List el in lst)
+                    res += el.ToString();
+
+            return res + '\n';
+        }
     }
 }
