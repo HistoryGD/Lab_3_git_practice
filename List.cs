@@ -72,4 +72,51 @@ namespace Lab_3
             return res + '\n';
         }
     }
+
+    public class Sp // Клас, який описує структуру список підсписків
+    {
+        public Queue MyQueue;
+
+        // Конструктор структури
+        public Sp()
+        {
+            MyQueue = new Queue();
+        }
+
+        // Метод додавання підсписку у список
+        public void EnQueue(El_Queue el_Sp)
+        {
+            MyQueue.Enqueue(el_Sp);
+        }
+
+        // Метод видалення підсписку зі списку
+        public void DeQueue()
+        {
+            MyQueue.Dequeue();
+        }
+
+        // Метод перегляду першого елементу списка
+        public El_Queue? Peek()
+        {
+            return (El_Queue?)MyQueue.Peek();
+        }
+
+        // Метод перевірки, порожній список чи ні
+        public bool IsEmpty()
+        {
+            return MyQueue.Count == 0;
+        }
+
+        // Метод виведення інформації зі списку
+        public override string ToString()
+        {
+            string res = "";
+
+            if (MyQueue.Count != 0)
+                foreach (var el in MyQueue)
+                    res += el.ToString();
+
+            return res;
+        }
+    }
 }
